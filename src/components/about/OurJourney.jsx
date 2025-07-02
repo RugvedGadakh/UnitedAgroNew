@@ -15,7 +15,7 @@ const OurJourney = () => {
       description:
         "Foundation of United Agro as a trading company",
       icon: <MapPin size={24} />,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/Images/About3.jpg",
       details: "United Agro Frozen Food Products Pvt. Ltd. began its journey in 2013 as a food trading company. With a focus on sourcing and supplying high-quality frozen vegetables, our mission was simple yet powerful — to deliver consistent freshness and quality to Indian households and businesses.",
     },
     {
@@ -23,7 +23,7 @@ const OurJourney = () => {
       title: "Building Strong Foundations",
       description: "Establishing sourcing and distribution networks",
       icon: <Factory size={24} />,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/Images/About2.jpg",
       details: "During these formative years, we developed a robust supplier base and reliable distribution channels. By fostering trust with farmers and consistently meeting customer expectations, we built the foundation for a scalable and sustainable food business.",
     },
 
@@ -32,7 +32,7 @@ const OurJourney = () => {
       title: "A Transformational Milestone",
       description: "Launch of our manufacturing facility in Komathan",
       icon: <Award size={24} />,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/Images/About1.jpg",
       details: "2017 marked a turning point as we inaugurated our first state-of-the-art frozen food processing facility in Komathan, near Shirdi, Maharashtra. This transition from a trading company to a fully integrated food production unit gave us complete control over quality, hygiene, packaging, and logistics.",
     },
  

@@ -9,17 +9,24 @@ import "./Header.css"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [showHeader, setShowHeader] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
+    let lastScrollY = window.scrollY
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true)
       } else {
         setScrolled(false)
       }
+      if (window.scrollY > lastScrollY && window.scrollY > 80) {
+        setShowHeader(false)
+      } else {
+        setShowHeader(true)
+      }
+      lastScrollY = window.scrollY
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -35,7 +42,7 @@ const Header = () => {
   }
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`header${scrolled ? " scrolled" : ""}${showHeader ? "" : " hide"}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
@@ -72,6 +79,11 @@ const Header = () => {
             <li>
               <Link to="/brochure" className={location.pathname === "/brochure" ? "active" : ""}>
                 Brochure
+              </Link>
+            </li>
+            <li>
+              <Link to="/clients" className={location.pathname === "/clients" ? "active" : ""}>
+                Our Clients
               </Link>
             </li>
           </ul>

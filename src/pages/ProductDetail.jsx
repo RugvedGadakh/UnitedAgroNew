@@ -52,11 +52,6 @@ const ProductDetail = () => {
     )
   }
 
-  // Build image URL from backend image API
-  const imageUrl = product.image
-    ? `https://agro-food-tech-be.onrender.com/api/image/view/${product.image}`
-    : "/placeholder.svg"
-
   return (
     <div className="product-detail-page">
       <div className="container">
@@ -73,7 +68,7 @@ const ProductDetail = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img src={imageUrl} alt={product.name} />
+            <img src={product.image || "/placeholder.svg"} alt={product.name} />
           </motion.div>
 
           <motion.div

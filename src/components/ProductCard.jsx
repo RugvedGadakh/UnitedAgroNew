@@ -5,11 +5,6 @@ import { motion } from "framer-motion"
 import "./ProductCard.css"
 
 const ProductCard = ({ product }) => {
-  // Construct the image URL using image ID
-  const imageUrl = product.image
-    ? `https://agro-food-tech-be.onrender.com/api/image/view/${product.image}`
-    : "/placeholder.svg"
-
   return (
     <motion.div
       className="product-card"
@@ -19,12 +14,12 @@ const ProductCard = ({ product }) => {
       viewport={{ once: true }}
     >
       <div className="product-image">
-        <img src={imageUrl} alt={product.name} />
+        <img src={product.image || "/placeholder.svg"} alt={product.name} />
       </div>
       <div className="product-info">
         <h3>{product.name}</h3>
         <p>{product.shortDescription}</p>
-        <Link to={`/products/${product._id}`} className="btn">
+        <Link to={`/products/${product.id}`} className="btn">
           View Details
         </Link>
       </div>

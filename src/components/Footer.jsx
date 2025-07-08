@@ -68,45 +68,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
-          <div className="footer-section">
-            <h4>Our Products</h4>
-            <ul className="footer-links">
-              {productCategories.map((product, index) => (
-                <li key={index}>
-                  <Link to={product.path}>{product.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="footer-section contact-section">
-            <h4>Get in Touch</h4>
-            <div className="contact-info">
-              <div className="contact-item">
-                <Phone size={16} />
-                <div>
-                  <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                  <a href="tel:+15551234568">+1 (555) 123-4568</a>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <Mail size={16} />
-                <div>
-                  <a href="mailto:info@United Agro Food.com">info@United Agro Food.com</a>
-                  <a href="mailto:sales@United Agro Food.com">sales@United Agro Food.com</a>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <MapPin size={16} />
-                <div>
-                  <span>123 Frozen Lane</span>
-                  <span>Iceville, FL 12345</span>
-                </div>
-              </div>
+          {/* Map and Address Section */}
+          <div className="footer-section map-section" style={{ gridColumn: '3 / span 2', display: 'flex', flexDirection: 'column', alignItems: 'stretch', justifyContent: 'center' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.729395555772!2d74.49819637468408!3d19.85139962717412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc436beaaaaaab%3A0x1ed39ed0a1461f77!2sUnited%20Agro%20Frozen%20Food%20Products%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1751974656855!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style={{ border: 0, borderRadius: '10px', marginBottom: '10px', width: '100%' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="United Agro Location"
+            ></iframe>
+            <div className="footer-address">
+              267/05, Kokamthan, Maharashtra 423601
             </div>
           </div>
         </div>
@@ -115,17 +90,8 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="container">
-          <div className="footer-bottom-content">
-            <div className="footer-bottom-left">
-              <p>&copy; {currentYear} United Agro Food. All Rights Reserved.</p>
-              
-            </div>
-            <div className="footer-bottom-right">
-              <div className="sustainability-badge">
-                <Leaf size={16} />
-                <span>Committed to Sustainable Practices</span>
-              </div>
-            </div>
+          <div className="footer-bottom-content centered-footer-text">
+            <p className="copyright-gradient">&copy; {currentYear} United Agro Food. All Rights Reserved.</p>
           </div>
         </div>
       </div>

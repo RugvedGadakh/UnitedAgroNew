@@ -122,57 +122,6 @@ export default function ClientsSection() {
           ))}
         </div>
 
-        {/* Clients Section */}
-        <div className="mb-24">
-          <div className="flex items-center mb-12">
-            <div className="w-1 h-12 bg-green-600 mr-6"></div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900">Client Portfolio</h2>
-              <p className="text-gray-600 mt-2">Strategic partnerships driving mutual growth</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clients.map((client, index) => (
-              <div
-                key={index}
-                className={`group bg-white border border-gray-200 hover:border-green-600 transition-all duration-300 hover:shadow-lg ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-                style={{ transitionDelay: `${index * 80}ms` }}
-              >
-                {/* Client Logo Area */}
-                <div className="h-24 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                  <img
-                    src={client.logo || "/placeholder.svg"}
-                    alt={`${client.name} logo`}
-                    className="max-w-32 max-h-16 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-
-                {/* Client Info */}
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <span className="text-xs font-semibold text-green-600 uppercase tracking-wide bg-green-50 px-2 py-1">
-                      {client.industry}
-                    </span>
-                    <span className="text-xs text-gray-500">Since {client.partnership}</span>
-                  </div>
-
-                  <h3 className="font-bold text-lg text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                    {client.name}
-                  </h3>
-
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2 text-green-600" />
-                    <span className="text-sm">{client.location}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Distribution Network */}
         <div className="mb-24">
           <div className="flex items-center mb-12">

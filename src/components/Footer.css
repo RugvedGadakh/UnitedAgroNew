@@ -1,8 +1,10 @@
-.footer {
+.footer, .footer-bottom {
   background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 50%, var(--gray-900) 100%);
   color: var(--white);
   position: relative;
   overflow: hidden;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
 }
 
 .footer::before {
@@ -199,7 +201,7 @@
 
 .contact-item a,
 .contact-item span {
-  color: var(--gray-300);
+  color: var(--gray-900);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
@@ -218,12 +220,12 @@
   backdrop-filter: blur(10px);
 }
 
-.footer-bottom-content {
+.footer-bottom-content.centered-footer-text {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .footer-bottom-left {

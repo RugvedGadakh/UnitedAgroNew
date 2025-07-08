@@ -3,8 +3,8 @@
   color: var(--white);
   position: relative;
   overflow: hidden;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  /* border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem; */
 }
 
 .footer::before {
@@ -56,7 +56,6 @@
 }
 
 .footer-logo h3::after {
-  content: "🌽";
   position: absolute;
   top: -2px;
   right: -30px;

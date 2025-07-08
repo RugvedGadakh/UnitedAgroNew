@@ -145,7 +145,7 @@ export default function ClientsSection() {
               </div>
               <div className="bg-white border border-gray-200 p-6">
                 <img
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1751978032/map_india_yhgfb6.png"
                   alt="Distribution network map"
                   className="w-full h-48 object-cover"
                 />

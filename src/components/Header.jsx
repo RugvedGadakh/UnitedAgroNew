@@ -14,19 +14,30 @@ const Header = () => {
 
   useEffect(() => {
     let lastScrollY = window.scrollY
+    let ticking = false
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 50) {
+            setScrolled(true)
+          } else {
+            setScrolled(false)
+          }
+
+          if (window.scrollY > lastScrollY && window.scrollY > 80) {
+            setShowHeader(false)
+          } else {
+            setShowHeader(true)
+          }
+
+          lastScrollY = window.scrollY
+          ticking = false
+        })
+        ticking = true
       }
-      if (window.scrollY > lastScrollY && window.scrollY > 80) {
-        setShowHeader(false)
-      } else {
-        setShowHeader(true)
-      }
-      lastScrollY = window.scrollY
     }
+
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -37,6 +48,21 @@ const Header = () => {
     setIsOpen(false)
   }, [location])
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto"
+  }, [isOpen])
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [])
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -46,19 +72,23 @@ const Header = () => {
       <div className="container header-container">
         <Link to="/" className="logo">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="logo"
           >
             <span className="logo-orange">United</span>{" "}
             <span className="logo-green">Agro</span>{" "}
             <span className="logo-red">Foods</span>
           </motion.div>
-
         </Link>
 
-        <div className="mobile-toggle" onClick={toggleMenu}>
+        <div
+          className="mobile-toggle"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </div>
 
@@ -70,7 +100,10 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/products" className={location.pathname.includes("/products") ? "active" : ""}>
+              <Link
+                to="/products"
+                className={location.pathname.startsWith("/products") ? "active" : ""}
+              >
                 Products
               </Link>
             </li>
@@ -81,7 +114,7 @@ const Header = () => {
             </li>
             <li>
               <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
-                Contact
+                Contact Us
               </Link>
             </li>
             <li>

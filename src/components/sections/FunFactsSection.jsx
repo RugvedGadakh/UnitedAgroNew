@@ -5,7 +5,7 @@ import { Factory, Clock, Leaf, Award } from "lucide-react"
 
 const FunFactsSection = () => {
   const funFacts = [
-    { number: "50MT+", label: "Cold Storage Facilities", icon: <Factory size={32} /> },
+    { number: "3000MT+", label: "Cold Storage Facilities", icon: <Factory size={32} /> },
     { number: "12hrs", label: "Farm to Freezer Time", icon: <Clock size={32} /> },
     { number: "2000+", label: "Partner Farms", icon: <Leaf size={32} /> },
     { number: "12+", label: "Years of Excellence", icon: <Award size={32} /> },

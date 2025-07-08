@@ -45,9 +45,17 @@ const Header = () => {
     <header className={`header${scrolled ? " scrolled" : ""}${showHeader ? "" : " hide"}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            UnitedAgro
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="logo"
+          >
+            <span className="logo-orange">United</span>{" "}
+            <span className="logo-green">Agro</span>{" "}
+            <span className="logo-red">Foods</span>
           </motion.div>
+
         </Link>
 
         <div className="mobile-toggle" onClick={toggleMenu}>
@@ -74,11 +82,6 @@ const Header = () => {
             <li>
               <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
                 Contact
-              </Link>
-            </li>
-            <li>
-              <Link to="/brochure" className={location.pathname === "/brochure" ? "active" : ""}>
-                Brochure
               </Link>
             </li>
             <li>

@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section company-section">
             <div className="footer-logo">
-              <h3>FrozenDelights</h3>
+              <h3>United Agro Food</h3>
               <div className="logo-tagline">Farm Fresh • Flash Frozen • Premium Quality</div>
             </div>
             <p className="company-description">
@@ -95,8 +95,8 @@ const Footer = () => {
               <div className="contact-item">
                 <Mail size={16} />
                 <div>
-                  <a href="mailto:info@frozendelights.com">info@frozendelights.com</a>
-                  <a href="mailto:sales@frozendelights.com">sales@frozendelights.com</a>
+                  <a href="mailto:info@United Agro Food.com">info@United Agro Food.com</a>
+                  <a href="mailto:sales@United Agro Food.com">sales@United Agro Food.com</a>
                 </div>
               </div>
 
@@ -117,7 +117,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <div className="footer-bottom-left">
-              <p>&copy; {currentYear} FrozenDelights. All Rights Reserved.</p>
+              <p>&copy; {currentYear} United Agro Food. All Rights Reserved.</p>
               
             </div>
             <div className="footer-bottom-right">

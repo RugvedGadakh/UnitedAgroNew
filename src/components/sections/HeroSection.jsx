@@ -48,9 +48,9 @@ const HeroSection = () => {
             <Leaf size={20} />
             Explore Products
           </Link>
-          <Link to="/brochure" className="btn btn-secondary btn-large">
+          <Link to="/contact" className="btn btn-secondary btn-large">
             <ArrowRight size={20} />
-            Download Catalog
+            Contact us
           </Link>
         </motion.div>
       </div>

@@ -11,7 +11,6 @@ import Products from "./pages/Products"
 import ProductDetail from "./pages/ProductDetail"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
-import Brochure from "./pages/Brochure"
 import ChatbotComponent from "./components/ChatbotComponent"
 import ClientsSection from "./components/sections/OurClients"
 import "./App.css"
@@ -77,7 +76,6 @@ function App() {
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/brochure" element={<Brochure />} />
             <Route path="/clients" element={<ClientsSection />} />
           </Routes>
         </AnimatePresence>

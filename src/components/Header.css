@@ -41,8 +41,25 @@
   position: relative;
 }
 
+.logo-orange {
+  color: orange;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.logo-green {
+  color: green;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.logo-red {
+  color: red;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
 .logo::after {
-  content: "🌽";
   position: absolute;
   top: -5px;
   right: -25px;

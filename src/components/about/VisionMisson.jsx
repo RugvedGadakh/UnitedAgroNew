@@ -1,106 +1,113 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Eye, Target, Heart, Zap, Leaf, Users } from "lucide-react"
+import { Heart, Leaf, Zap, Users } from "lucide-react"
 
 const VisionMission = () => {
   const values = [
     {
-      icon: <Heart size={32} />,
+      icon: <Heart size={28} />,
       title: "Quality First",
       description: "Every product meets our rigorous standards for taste, nutrition, and safety.",
     },
     {
-      icon: <Leaf size={32} />,
+      icon: <Leaf size={28} />,
       title: "Sustainability",
       description: "Protecting our planet through responsible farming and eco-friendly practices.",
     },
     {
-      icon: <Zap size={32} />,
+      icon: <Zap size={28} />,
       title: "Innovation",
       description: "Continuously advancing our technology to deliver better products.",
     },
     {
-      icon: <Users size={32} />,
+      icon: <Users size={28} />,
       title: "Community",
       description: "Supporting local farmers and communities in everything we do.",
     },
   ]
 
   return (
-    <section className="relative py-20 bg-white">
-      <div className="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_25%_75%,_theme(colors.green.100)_0%,_transparent_50%),radial-gradient(circle_at_75%_25%,_theme(colors.yellow.100)_0%,_transparent_50%)]"></div>
-      <div className="relative max-w-6xl mx-auto px-4">
+    <section className="w-full bg-gradient-to-br from-green-200 to-lime-200 text-gray-800">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-24">
+        {/* Image Left + Content Right */}
         <motion.div
-          className="text-center mb-20"
+          className="flex flex-col lg:flex-row items-center gap-12 bg-white rounded-3xl p-10 shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Our Vision & Mission</h2>
-          <p className="text-lg text-gray-600">Guiding principles that drive everything we do</p>
-        </motion.div>
-
-        <div className="flex flex-wrap items-center justify-between gap-10 bg-green-600 text-white rounded-3xl p-10 mb-20 shadow-lg">
-          <motion.div
-            className="flex-1 min-w-[280px] text-white"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
-            <p className="text-base leading-7 mb-6 text-shadow">To be the world's most trusted provider of premium frozen foods, setting the standard for quality, sustainability, and innovation in the industry while nourishing families globally.</p>
-            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-            <p className="text-base leading-7 text-shadow">To deliver farm-fresh quality frozen foods through sustainable practices, cutting-edge technology, and unwavering commitment to excellence, while supporting farming communities and protecting our environment.</p>
-          </motion.div>
-
-          <motion.div
-            className="flex-1 min-w-[280px] text-center"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          {/* Left Side Image */}
+          <div className="w-full lg:w-1/2">
             <img
-              src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1751118918/about_11zon_ivriwa.jpg"
+              src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752044689/WhatsApp_Image_2025-07-06_at_17.54.14_0f76bcba_wria5b.jpg"
               alt="Vision and Mission"
-              className="max-w-full h-auto rounded-xl shadow-xl"
+              className="w-full h-auto rounded-2xl border border-gray-200 shadow-md"
             />
-          </motion.div>
-        </div>
+          </div>
 
-        <motion.div
-          className="pt-0 pb-0 rounded-md"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-4xl font-semibold text-gray-900 text-center mb-8">Our Core Values</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+          {/* Right Side Content */}
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 text-green-800 drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]">
+              Our Vision & Mission
+            </h2>
+            <div className="w-20 h-1 bg-green-600 mb-6 rounded-full " />
+            <div className="space-y-8">
+              <div className="border-l-4 border-green-600 pl-6">
+                <h3 className="text-2xl font-semibold mb-2 text-green-700 drop-shadow-sm">Our Vision</h3>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  To be the world’s most trusted provider of premium frozen foods, setting the
+                  benchmark for quality, sustainability, and innovation — nourishing families across
+                  the globe.
+                </p>
+              </div>
+              <div className="border-l-4 border-green-600 pl-6">
+                <h3 className="text-2xl font-semibold mb-2 text-green-700 drop-shadow-sm">Our Mission</h3>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  To deliver farm-fresh frozen foods through eco-conscious practices and cutting-edge
+                  technology, while uplifting farming communities and preserving the environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Core Values */}
+      <motion.div
+        className="bg-white text-gray-900 pt-20 pb-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <h3 className="text-3xl sm:text-4xl font-semibold text-center mb-10 text-green-800">
+            Our Core Values
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg border-2 border-green-100 p-6 text-center transition duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="bg-white rounded-2xl shadow-md border border-green-200 p-6 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-xl bg-gradient-to-r from-green-500 to-lime-500 text-white shadow-md mb-4">
+                <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-lime-500 text-white shadow-sm mb-4">
                   {value.icon}
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                <h4 className="text-lg font-semibold mb-2">{value.title}</h4>
+                <p className="text-gray-600 text-sm">{value.description}</p>
               </motion.div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   )
 }
 
-export default VisionMission;
+export default VisionMission

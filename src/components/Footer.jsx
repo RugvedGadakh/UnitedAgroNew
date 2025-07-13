@@ -33,7 +33,7 @@ const Footer = () => {
               <div className="logo-tagline">Farm Fresh • Flash Frozen • Premium Quality</div>
             </div>
             <p className="company-description">
-              Leading the frozen food industry with premium quality products since 2010. From farm to freezer, we
+              Leading the frozen food industry with premium quality products since 2013. From farm to freezer, we
               preserve nature's goodness with cutting-edge technology and sustainable practices.
             </p>
 

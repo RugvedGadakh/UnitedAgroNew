@@ -48,14 +48,16 @@
   background: none;
   -webkit-text-fill-color: initial;
   text-shadow:
-    -0.3px -0.3px 0 #000,
-    0.3px -0.3px 0 #000,
-    -0.3px 0.3px 0 #000,
-    0.3px 0.3px 0 #000;
+    -0.1px -0.1px 0 #000,
+    0.1px -0.1px 0 #000,
+    -0.1px 0.1px 0 #000,
+    0.1px 0.1px 0 #000;
 }
 
+
+
 .logo-orange {
-  color: orange;
+  color: rgb(244, 152, 15);
 }
 
 .logo-green {

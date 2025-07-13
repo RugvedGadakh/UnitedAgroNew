@@ -77,9 +77,7 @@ const Header = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="logo"
           >
-            <span className="logo-orange">United</span>{" "}
-            <span className="logo-green">Agro</span>{" "}
-            <span className="logo-red">Foods</span>
+            <span className="logo-orange">United Agro Foods Shirdi</span>
           </motion.div>
         </Link>
 
@@ -110,6 +108,14 @@ const Header = () => {
             <li>
               <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
                 About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/brands"
+                className={location.pathname.startsWith("/brands") ? "active" : ""}
+              >
+                Brands
               </Link>
             </li>
             <li>

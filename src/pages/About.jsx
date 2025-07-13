@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center text-white flex items-center justify-center text-center min-h-[60vh] px-4 py-24" style={{ backgroundImage: "url('https://res.cloudinary.com/dcxxiwmdo/image/upload/v1750959150/AboutBg_hie7kd.jpg')" }}>
+      <section className="relative bg-cover bg-center text-white flex items-center justify-center text-center min-h-[45vh] px-4 py-24" style={{ backgroundImage: "url('https://res.cloudinary.com/dcxxiwmdo/image/upload/v1750959150/AboutBg_hie7kd.jpg')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
         <div className="relative z-10 max-w-3xl">
           <motion.h1
@@ -62,7 +62,7 @@ const About = () => {
             >
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-green-700"></div>
               <img
-                src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1751119066/about1_11zon_qyl6wk.jpg"
+                src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1751978036/Logobard_bruakv.png"
                 alt="Our facility"
                 className="w-full h-auto rounded-lg transform transition-transform duration-300 hover:scale-105"
               />

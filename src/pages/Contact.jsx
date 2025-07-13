@@ -84,7 +84,7 @@ const Contact = () => {
                     <p className="text-gray-600 font-medium">267/05, Komathan,
                       Near Samata International School,
                       Kokamtham, Tal – Kopergaon,
-                      District – Ahmednagar, Maharashtra</p>
+                      District – Ahilyanagar, Maharashtra</p>
                   </div>
                 </div>
 
@@ -95,8 +95,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Business Hours</h4>
-                    <p className="text-gray-600 font-medium">Mon - Fri: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600 font-medium">Saturday: 9:00 AM - 4:00 PM</p>
+                    <p className="text-gray-600 font-medium">Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    <p className="text-gray-600 font-medium">Saturday: 9:00 AM - 3:00 PM</p>
                   </div>
                 </div>
               </div>

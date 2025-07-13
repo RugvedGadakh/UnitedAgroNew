@@ -13,6 +13,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import ChatbotComponent from "./components/ChatbotComponent"
 import ClientsSection from "./components/sections/OurClients"
+import Brands from "./pages/Brands"
 import "./App.css"
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/about" element={<About />} />
+            <Route path="/brands" element={<Brands />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/clients" element={<ClientsSection />} />
           </Routes>

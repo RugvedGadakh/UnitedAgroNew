@@ -75,8 +75,8 @@ const states = [
 const metrics = [
   { value: "50+", label: "Active Clients", icon: Users },
   { value: "14", label: "States Covered", icon: Globe },
-  { value: "99.2%", label: "Delivery Success", icon: Truck },
-  { value: "5+", label: "Years Experience", icon: TrendingUp },
+  { value: "100%", label: "Delivery Success", icon: Truck },
+  { value: "12+", label: "Years Experience", icon: TrendingUp },
 ]
 
 export default function ClientsSection() {
@@ -147,7 +147,7 @@ export default function ClientsSection() {
                 <img
                   src="https://res.cloudinary.com/dcxxiwmdo/image/upload/v1751978032/map_india_yhgfb6.png"
                   alt="Distribution network map"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-85 object-cover"
                 />
               </div>
             </div>

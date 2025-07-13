@@ -1,18 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Award } from "lucide-react"
+import { GraduationCap } from "lucide-react"
 
 const OurLeaders = () => {
   const leader = {
-    name: "Maria Rodriguez",
-    position: "Co-Founder & CEO",
-    image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752044699/WhatsApp_Image_2025-07-07_at_16.43.04_0738b558_ymrg9q.jpg",
-    bio: "With over 20 years in agriculture, Maria leads our vision for sustainable farming and quality excellence. Her leadership continues to shape the company’s strategic direction with a strong focus on innovation, community, and sustainability.",
-    achievements: [
-      "Agricultural Innovation Award 2022",
-      "Women in Business Leadership 2021",
-    ],
+    name: "Mr. Santosh V. Thorat",
+    position: "Founder & Director",
+    image:
+      "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752044699/WhatsApp_Image_2025-07-07_at_16.43.04_0738b558_ymrg9q.jpg",
+    bio: "Mr. Santosh Thorat is the visionary behind United Agro’s growth. With expertise in finance and a deep understanding of the food industry, he led the company’s transformation from a trading firm to a fully integrated frozen food producer. His focus on quality and long-term strategy drives the company forward.",
+    education: ["MBA in Finance"],
     email: "maria@UnitedAgro.com",
   }
 
@@ -27,7 +25,7 @@ const OurLeaders = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl ont-bold text-[#14532d] mb-4">Meet Our Leader</h2>
+          <h2 className="text-5xl font-bold text-[#14532d] mb-4">Meet Our Leader</h2>
           <p className="text-lg text-[#1c4532] max-w-2xl mx-auto">
             Visionary leadership that drives innovation and sustainable excellence
           </p>
@@ -41,12 +39,12 @@ const OurLeaders = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {/* Square Image */}
+          {/* Image */}
           <div className="flex-shrink-0">
             <img
               src={leader.image}
               alt={leader.name}
-              className="w-52 h-52 object-cover rounded-xl border-4 border-green-500 shadow-lg"
+              className="w-64 h-64 object-cover rounded-xl border-4 border-green-500 shadow-lg"
             />
           </div>
 
@@ -54,33 +52,29 @@ const OurLeaders = () => {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-1">{leader.name}</h3>
             <p className="text-green-700 font-medium text-lg mb-4">{leader.position}</p>
-            <p className="text-gray-800 leading-relaxed mb-6">{leader.bio}</p>
 
-            {/* Contact */}
-            <div className="flex gap-4 mb-6">
-              <a
-                href={`mailto:${leader.email}`}
-                className="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-
-            {/* Achievements */}
-            <div>
+            {/* Education */}
+            <div className="mb-6">
               <h4 className="flex items-center gap-2 text-gray-900 font-semibold mb-3 text-base">
-                <Award size={18} /> Recent Achievements
+                <GraduationCap size={18} /> Education
               </h4>
               <ul className="space-y-2">
-                {leader.achievements.map((achievement, index) => (
+                {leader.education.map((edu, index) => (
                   <li key={index} className="text-sm text-gray-700 flex items-start gap-2">
-                    <span>🏆</span>
-                    <span>{achievement}</span>
+                    <span>🎓</span>
+                    <span>{edu}</span>
                   </li>
                 ))}
               </ul>
             </div>
+
+            {/* Bio */}
+            <p className="text-gray-800 leading-relaxed mb-4">{leader.bio}</p>
+
+            {/* Quote */}
+            <p className="text-green-800 italic font-medium">
+              “When you lead with trust and quality, success naturally follows.”
+            </p>
           </div>
         </motion.div>
       </div>

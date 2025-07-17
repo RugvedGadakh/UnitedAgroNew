@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { Helmet } from "react-helmet-async"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+
 import { Package, Award, ShoppingCart, Star, CheckCircle, MapPin, Leaf } from "lucide-react"
 
 const Brands = () => {
@@ -14,23 +16,15 @@ const Brands = () => {
       name: "Corn Master",
       category: "corn",
       description: "Premium quality sweet corn kernels, flash-frozen to preserve natural sweetness and nutrients.",
-      logo: "/placeholder.svg?height=120&width=200",
+
       established: "2015",
       products: [
+
         {
           id: 1,
-          name: "Corn Master 1kg",
-          weight: "1 kg",
-          image: "/placeholder.svg?height=300&width=300",
-          availability: "In Stock",
-          features: ["Premium Quality", "Flash Frozen", "No Preservatives", "Farm Fresh"],
-          description: "Our flagship 1kg pack of premium sweet corn kernels, perfect for families and restaurants.",
-        },
-        {
-          id: 2,
-          name: "Corn Master 500gm",
-          weight: "500 gm",
-          image: "/placeholder.svg?height=300&width=300",
+          name: "Corn Master",
+          weight: "500 gm / 1 kg",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752768468/WhatsApp_Image_2025-07-10_at_08.49.43_c7c45abc_tne2wl.jpg",
           availability: "In Stock",
           features: ["Premium Quality", "Flash Frozen", "No Preservatives", "Convenient Size"],
           description: "Perfect portion size for small families, maintaining the same premium quality.",
@@ -42,14 +36,14 @@ const Brands = () => {
       name: "Krushi Ratna",
       category: "vegetables",
       description: "Traditional farming meets modern technology. Premium frozen vegetables from trusted farms.",
-      logo: "/placeholder.svg?height=120&width=200",
+
       established: "2018",
       products: [
         {
           id: 3,
           name: "Krushi Ratna Green Peas 1kg",
           weight: "1 kg",
-          image: "/placeholder.svg?height=300&width=300",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765000/greenpeaspacket_byucb2.jpg",
           availability: "In Stock",
           features: ["Organic Certified", "Hand Picked", "Flash Frozen", "Rich in Protein"],
           description: "Premium green peas sourced from organic farms, rich in protein and essential nutrients.",
@@ -61,14 +55,13 @@ const Brands = () => {
       name: "Green Peas Premium",
       category: "peas",
       description: "Specially curated green peas collection offering various pack sizes for different needs.",
-      logo: "/placeholder.svg?height=120&width=200",
       established: "2020",
       products: [
         {
           id: 4,
           name: "Green Peas 200gm",
           weight: "200 gm",
-          image: "/placeholder.svg?height=300&width=300",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765000/greenpeaspacket_byucb2.jpg",
           availability: "In Stock",
           features: ["Small Pack", "Fresh Quality", "Quick Cook", "Nutrient Rich"],
           description: "Convenient small pack perfect for single servings or small portions.",
@@ -80,14 +73,14 @@ const Brands = () => {
       name: "Baby Corn Deluxe",
       category: "specialty",
       description: "Tender baby corn harvested at the perfect stage for optimal taste and texture.",
-      logo: "/placeholder.svg?height=120&width=200",
+
       established: "2019",
       products: [
         {
           id: 5,
           name: "Baby Corn 500gm",
           weight: "500 gm",
-          image: "/placeholder.svg?height=300&width=300",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765635/WhatsApp_Image_2025-07-10_at_08.49.42_e7a148d2_imr22t.jpg",
           availability: "In Stock",
           features: ["Tender & Sweet", "Restaurant Grade", "Flash Frozen", "Versatile Use"],
           description: "Premium baby corn perfect for stir-fries, curries, and gourmet dishes.",
@@ -96,7 +89,7 @@ const Brands = () => {
           id: 6,
           name: "Corn Cob Premium",
           weight: "Whole Cob",
-          image: "/placeholder.svg?height=300&width=300",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752768468/WhatsApp_Image_2025-07-10_at_08.49.44_eb3798dd_s717w3.jpg",
           availability: "In Stock",
           features: ["Whole Cob", "BBQ Ready", "Natural Sweet", "Farm Fresh"],
           description: "Whole corn cobs perfect for grilling, boiling, or roasting. Natural farm-fresh taste.",
@@ -118,16 +111,16 @@ const Brands = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Our Registered Brands - FrozenDelights Premium Products",
+    name: "Our Registered Brands - United Agro Food Premium Products",
     description:
       "Discover our registered brand portfolio including Corn Master, Krushi Ratna, and specialty frozen products.",
-    url: "https://frozendelights.com/brands",
+    url: "https://United Agro Food.com/brands",
   }
 
   return (
     <>
       <Helmet>
-        <title>Our Registered Brands - Premium Frozen Food Products | FrozenDelights</title>
+        <title>Our Registered Brands - Premium Frozen Food Products | United Agro Food</title>
         <meta
           name="description"
           content="Explore our registered brand portfolio including Corn Master, Krushi Ratna, Green Peas Premium, and Baby Corn Deluxe. Premium frozen food products with guaranteed quality."
@@ -136,7 +129,7 @@ const Brands = () => {
           name="keywords"
           content="corn master, krushi ratna, frozen corn brands, green peas, baby corn, registered brands, premium frozen food"
         />
-        <link rel="canonical" href="https://frozendelights.com/brands" />
+        <link rel="canonical" href="https://UnitedAgroFood.com/brands" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -174,11 +167,10 @@ const Brands = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold border transition-all duration-300 shadow-sm ${
-                    activeCategory === category.id
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold border transition-all duration-300 shadow-sm ${activeCategory === category.id
                       ? "bg-gradient-to-br from-green-500 to-yellow-400 text-white border-green-600 shadow-md"
                       : "bg-white text-gray-700 border-green-200 hover:text-green-600 hover:shadow-md"
-                  }`}
+                    }`}
                 >
                   {category.icon}
                   {category.name}
@@ -201,9 +193,9 @@ const Brands = () => {
                 viewport={{ once: true }}
               >
                 <div className="grid md:grid-cols-[auto_1fr] gap-8 p-10 bg-green-50 border-b border-green-100 items-center">
-                  <div className="w-32 h-20 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100">
+                  {/* <div className="w-32 h-20 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100">
                     <img src={brand.logo || "/placeholder.svg"} alt={`${brand.name} logo`} className="max-w-[100px] max-h-[60px] object-contain" />
-                  </div>
+                  </div> */}
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{brand.name}</h3>
                     <p className="text-gray-600 leading-relaxed mb-3">{brand.description}</p>
@@ -223,7 +215,7 @@ const Brands = () => {
                   <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {brand.products.map((product) => (
                       <div key={product.id} className="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all">
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-100 overflow-hidden">
                           <img src={product.image || "/placeholder.svg"} alt={product.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                           <div className="absolute top-3 right-3 bg-green-600 text-white text-xs px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
                             <CheckCircle size={14} /> {product.availability}
@@ -240,9 +232,12 @@ const Brands = () => {
                               </span>
                             ))}
                           </div>
-                          <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-br from-green-500 to-yellow-400 text-white px-5 py-3 rounded-lg font-semibold hover:shadow-md transition">
+                          <Link
+                            to="/contact"
+                            className="w-full flex items-center justify-center gap-2 bg-gradient-to-br from-green-500 to-yellow-400 text-white px-5 py-3 rounded-lg font-semibold hover:shadow-md transition"
+                          >
                             <ShoppingCart size={16} /> Request Quote
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     ))}

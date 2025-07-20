@@ -77,6 +77,7 @@ const Header = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="logo"
           >
+            <img src="/Images/logo.png" alt="Logo" className="logo-img" />
             <span className="logo-orange">United Agro Foods Shirdi</span>
           </motion.div>
         </Link>

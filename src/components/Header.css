@@ -29,6 +29,9 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-weight: 700;
@@ -39,6 +42,11 @@
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
 }
 
 .logo-orange,
@@ -53,8 +61,6 @@
     -0.1px 0.1px 0 #000,
     0.1px 0.1px 0 #000;
 }
-
-
 
 .logo-orange {
   color: rgb(244, 152, 15);
@@ -138,20 +144,18 @@
   }
 
   .nav-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 0;
-  /* background: var(--white); */
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: var(--shadow-lg);
-  border-top: 1px solid var(--gray-100);
-  z-index: 999;
-}
-
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--gray-100);
+    z-index: 999;
+  }
 
   .nav-menu.active {
     height: 320px;
@@ -172,7 +176,17 @@
   }
 
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  .logo-orange,
+  .logo-green,
+  .logo-red {
+    font-size: 1.2rem;
+  }
+
+  .logo-img {
+    height: 32px;
   }
 
   .logo::after {
@@ -187,6 +201,16 @@
   }
 
   .logo {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+  }
+
+  .logo-orange,
+  .logo-green,
+  .logo-red {
+    font-size: 1.4rem;
+  }
+
+  .logo-img {
+    height: 48px;
   }
 }

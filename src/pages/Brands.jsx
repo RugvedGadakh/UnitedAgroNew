@@ -23,8 +23,8 @@ const Brands = () => {
         {
           id: 1,
           name: "Corn Master",
-          weight: "500 gm / 1 kg",
-          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752768468/WhatsApp_Image_2025-07-10_at_08.49.43_c7c45abc_tne2wl.jpg",
+          weight: "500gm And 1kg",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752993717/sweetcorn_master_n9ghfk.png",
           availability: "In Stock",
           features: ["Premium Quality", "Flash Frozen", "No Preservatives", "Convenient Size"],
           description: "Perfect portion size for small families, maintaining the same premium quality.",
@@ -34,66 +34,75 @@ const Brands = () => {
     {
       id: 2,
       name: "Krushi Ratna",
-      category: "vegetables",
+      category: "corn",
       description: "Traditional farming meets modern technology. Premium frozen vegetables from trusted farms.",
 
       established: "2018",
       products: [
         {
-          id: 3,
-          name: "Krushi Ratna Green Peas 1kg",
-          weight: "1 kg",
-          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765000/greenpeaspacket_byucb2.jpg",
+          id: 1,
+          name: "Krushi Ratna American Sweet Corn 1kg",
+          weight: "500gm and 1kg",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752994064/krushiRatna_Corn_vkesce.png",
           availability: "In Stock",
           features: ["Organic Certified", "Hand Picked", "Flash Frozen", "Rich in Protein"],
-          description: "Premium green peas sourced from organic farms, rich in protein and essential nutrients.",
+          description: "Tender sweet corn harvested at the perfect stage for optimal taste and texture.",
         },
       ],
     },
     {
       id: 3,
-      name: "Green Peas Premium",
+      name: "Frozen Green Peas",
       category: "peas",
       description: "Specially curated green peas collection offering various pack sizes for different needs.",
-      established: "2020",
       products: [
         {
-          id: 4,
-          name: "Green Peas 200gm",
-          weight: "200 gm",
+          id: 2,
+          name: "Green Peas",
+          weight: "200gm, 500gm and 1kg",
           image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765000/greenpeaspacket_byucb2.jpg",
           availability: "In Stock",
           features: ["Small Pack", "Fresh Quality", "Quick Cook", "Nutrient Rich"],
-          description: "Convenient small pack perfect for single servings or small portions.",
+          description: "Naturally sweet and tender, perfect for Indian gravies, fried rice, and snacks.",
         },
       ],
     },
     {
       id: 4,
-      name: "Baby Corn Deluxe",
-      category: "specialty",
-      description: "Tender baby corn harvested at the perfect stage for optimal taste and texture.",
+      name: "Mix Veg",
+      category: "vegetables",
+      description: "A colorful blend of premium vegetables including carrots, peas, corn, and green beans.",
 
-      established: "2019",
       products: [
         {
-          id: 5,
-          name: "Baby Corn 500gm",
-          weight: "500 gm",
+          id: 1,
+          name: "Frozen Mix Veg",
+          weight: "1kg standard pack",
+          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765000/mixvegpacket_ocmehw.jpg",
+          availability: "In Stock",
+          features: ["Tender & Sweet", "Restaurant Grade", "Flash Frozen", "Versatile Use"],
+          description: "A healthy mix of premium vegetables for pulao, soups, parathas, and more.",
+        },
+
+      ],
+    },
+    {
+      id: 5,
+      name: "Baby Corn",
+      category: "corn",
+      description: "",
+
+      products: [
+        {
+          id: 1,
+          name: "Baby Corn",
+          weight: "500gm amd 1kg",
           image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752765635/WhatsApp_Image_2025-07-10_at_08.49.42_e7a148d2_imr22t.jpg",
           availability: "In Stock",
           features: ["Tender & Sweet", "Restaurant Grade", "Flash Frozen", "Versatile Use"],
-          description: "Premium baby corn perfect for stir-fries, curries, and gourmet dishes.",
+          description: "Crisp, young corn ideal for stir-fries, oriented dishes, and salad",
         },
-        {
-          id: 6,
-          name: "Corn Cob Premium",
-          weight: "Whole Cob",
-          image: "https://res.cloudinary.com/dcxxiwmdo/image/upload/v1752768468/WhatsApp_Image_2025-07-10_at_08.49.44_eb3798dd_s717w3.jpg",
-          availability: "In Stock",
-          features: ["Whole Cob", "BBQ Ready", "Natural Sweet", "Farm Fresh"],
-          description: "Whole corn cobs perfect for grilling, boiling, or roasting. Natural farm-fresh taste.",
-        },
+
       ],
     },
   ]
@@ -103,7 +112,6 @@ const Brands = () => {
     { id: "corn", name: "Corn Products", icon: <Award size={20} /> },
     { id: "vegetables", name: "Vegetables", icon: <Leaf size={20} /> },
     { id: "peas", name: "Peas", icon: <Star size={20} /> },
-    { id: "specialty", name: "Specialty", icon: <ShoppingCart size={20} /> },
   ]
 
   const filteredBrands = activeCategory === "all" ? brands : brands.filter((brand) => brand.category === activeCategory)
@@ -114,7 +122,7 @@ const Brands = () => {
     name: "Our Registered Brands - United Agro Food Premium Products",
     description:
       "Discover our registered brand portfolio including Corn Master, Krushi Ratna, and specialty frozen products.",
-    url: "https://United Agro Food.com/brands",
+    url: "https://UnitedAgroFood.com/brands",
   }
 
   return (
@@ -199,10 +207,7 @@ const Brands = () => {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{brand.name}</h3>
                     <p className="text-gray-600 leading-relaxed mb-3">{brand.description}</p>
-                    <div className="flex gap-4 text-sm font-semibold text-green-600">
-                      <span className="bg-white border border-green-200 px-3 py-1 rounded-full">Est. {brand.established}</span>
-                      <span className="bg-white border border-green-200 px-3 py-1 rounded-full">{brand.products.length} Products</span>
-                    </div>
+                 
                   </div>
                 </div>
 
@@ -252,7 +257,7 @@ const Brands = () => {
         <section className="bg-gray-800 py-24">
           <div className="container mx-auto px-4 text-center text-white">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-              <h2 className="text-4xl font-bold mb-4">Product Availability</h2>
+              <h2 className="text-4xl text-gray-200 font-bold mb-4">Product Availability</h2>
               <p className="text-lg text-gray-300 mb-16">Our registered brands are available across multiple channels and locations</p>
 
               <div className="grid gap-8 md:grid-cols-3 mb-20">
@@ -274,11 +279,14 @@ const Brands = () => {
               </div>
 
               <div className="bg-gray-700 p-12 rounded-3xl border border-gray-600">
-                <h3 className="text-3xl font-bold mb-4">Ready to Stock Our Brands?</h3>
+                <h3 className="text-3xl text-gray-200 font-bold mb-4">Ready to Stock Our Brands?</h3>
                 <p className="text-lg text-gray-300 mb-8">Contact our sales team for wholesale pricing and distribution opportunities</p>
                 <div className="flex flex-wrap justify-center gap-6">
-                  <button className="bg-gradient-to-br from-green-500 to-yellow-400 text-white px-8 py-3 rounded-lg font-semibold shadow-md">Contact Sales Team</button>
-                  <button className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold border border-green-200 shadow-sm">Download Product Catalog</button>
+<Link to="/contact">
+    <button className="bg-gradient-to-br from-green-500 to-yellow-400 text-white px-8 py-3 rounded-lg font-semibold shadow-md">
+      Contact Sales Team
+    </button>
+  </Link>                  <button className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold border border-green-200 shadow-sm">Download Product Catalog</button>
                 </div>
               </div>
             </motion.div>

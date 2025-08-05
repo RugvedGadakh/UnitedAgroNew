@@ -57,8 +57,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600 font-medium">+1 (555) 123-4567</p>
-                    <p className="text-gray-600 font-medium">+1 (555) 123-4568</p>
+                    <p className="text-gray-600 font-medium">+91 9529350434</p>
+                    <p className="text-gray-600 font-medium">+91 9921220385</p>
                   </div>
                 </div>
 
@@ -70,6 +70,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600 font-medium">unitedagrofoodpl@gmail.com</p>
+                    <p className="text-gray-600 font-medium">Marketing - harshunitedagrofoods@gmail.com</p>
                   </div>
                 </div>
 
@@ -79,11 +80,20 @@ const Contact = () => {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-600 font-medium">267/05, Komathan,
-                      Near Samata International School,
-                      Kokamtham, Tal – Kopergaon,
-                      District – Ahilyanagar, Maharashtra</p>
+                    <h4 className="text-lg font-semibold text-gray-900">Production Plant</h4>
+                    <p className="text-gray-600 font-medium">
+                      267/05, Komathan,<br />
+                      Near Samata International School,<br />
+                      Kokamtham, Tal – Kopergaon,<br />
+                      District – Ahilyanagar, Maharashtra - 423601
+                    </p>
+                    <h4 className="text-lg font-semibold text-gray-900 mt-6">Head Office</h4>
+                    <p className="text-gray-600 font-medium">
+                      Yashganga complex, Flat number 404,<br />
+                      Near navale bridge, Ambegaon BK,<br />
+                      Pin - 41104, Tal - Ambegaon,<br />
+                      Dis - Pune.
+                    </p>
                   </div>
                 </div>
 

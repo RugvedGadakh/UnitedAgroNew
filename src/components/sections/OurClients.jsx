@@ -66,7 +66,7 @@ const states = [
   "Karnataka",
   "Andhra Pradesh",
   "West Bengal",
-  "Tamil Nadu",
+  "Chennai",
   "Uttarakhand",
   "Kerala",
   "Odisha",
